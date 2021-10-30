@@ -18,3 +18,6 @@ def get_tweets():
     q = request.json['query']
     c = int(request.json['count'])
     return {'tweets': client.get_tweets(f'{q} -filter:retweets', c)}
+
+if __name__ == "__main__":
+    app.run(debug=True)
