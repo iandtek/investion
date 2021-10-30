@@ -8,9 +8,9 @@ client = TwitterClient()
 def home():
     return render_template('index.html')
 
-@app.route('/tweet-sentiment-analysis')
+@app.route('/tweets_sentiment_analysis')
 def tweet_sentiment_analysis():
-    return render_template('tweet-sentiment-analysis.html')    
+    return render_template('tweets_sentiment_analysis.html')    
 
 @app.route('/api/get-tweets', methods=["POST"])
 def get_tweets():
