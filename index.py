@@ -8,10 +8,6 @@ client = TwitterClient()
 def home():
     return render_template('home.html')
 
-@app.route('/api/get-cardano-tweets')
-def get_cardano_tweets():
-    return {'tweets': client.get_tweets('#cardano -filter:retweets', 1)}
-
 @app.route('/api/get-tweets', methods=["POST"])
 def get_tweets():
     print(request.json)
