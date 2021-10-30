@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from data_providers.TwitterClient import TwitterClient
 
-app = Flask(__name__, template_folder='views', static_folder='static',)
+app = Flask(__name__, template_folder='views', static_folder='static', static_url_path='')
 client = TwitterClient()
 
 @app.route('/')
