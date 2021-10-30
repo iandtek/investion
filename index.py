@@ -6,7 +6,11 @@ client = TwitterClient()
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
+
+@app.route('/tweet-sentiment-analysis')
+def tweet_sentiment_analysis():
+    return render_template('tweet-sentiment-analysis.html')    
 
 @app.route('/api/get-tweets', methods=["POST"])
 def get_tweets():
